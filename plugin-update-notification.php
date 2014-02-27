@@ -1,17 +1,12 @@
 <?php
-/*
-Plugin Name: Plugin Update Notification
-Plugin URI: http://co.deme.me/projects/plugin-update-notification/
-Description: Receive a daily email if you have any plugins that require updating.
-Author: Dan Coulter
-Version: 0.1.5
-Author URI: http://dancoulter.com
-*/
 /**
- * @package plugin-update-notification
- * @author Dan Coulter
- * @version 0.1.4
- */
+ * Plugin Name: Plugin Update Notification
+ * Plugin URI: http://co.deme.me/projects/plugin-update-notification/
+ * Description: Receive a daily email if you have any plugins that require updating.
+ * Author: Dan Coulter
+ * Version: 0.1.6
+ * Author URI: http://dancoulter.com
+*/
 
 class cm_pun {
 	function add_menu_page() {
@@ -41,7 +36,7 @@ class cm_pun {
 					
 				</form>
 				<p>
-					This plugin is a production of <a href="http://co.deme.me">CodeMeme</a>.  If you find it useful, please consider <a href="http://co.deme.me/donate">donating</a> a few dollars.
+					This plugin is a production of <a href="http://dancoulter.com">Dan Coulter</a>.  If you find it useful, please consider <a href="http://dancoulter.com/donate">donating</a> a few dollars or bitcoins.
 				</p>
 			</div>
 		<?php
@@ -60,7 +55,6 @@ class cm_pun {
 	}
 	
 	function send_email() {
-		
 		$plugins = get_option("_site_transient_update_plugins");
 		$count = count($plugins->response);
 		if ( $count ) {
